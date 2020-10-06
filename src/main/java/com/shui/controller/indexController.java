@@ -1,0 +1,35 @@
+package com.shui.controller;
+
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.shui.vo.PostVo;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+
+@Controller
+public class indexController extends BaseController{
+
+    @RequestMapping({"", "/", "index"})
+    public String index() {
+
+        // 获取当前文章列表
+        // 1分页信息、2分类信息、3用户、4置顶、5精选、6排序
+        IPage results = mPostService.paging(getPage(), null, null, null, null, "created");
+
+        request.setAttribute("pageData", results);
+
+        // 默认 CurrentCategoryId 设为 0
+        request.setAttribute("CurrentCategoryId", 0);
+        return "index";
+    }
+
+    @RequestMapping("/search")
+    public String search(String q) {
+
+        IPage pageData = searchService.search(getPage(), q);
+
+        request.setAttribute("q", q);
+        request.setAttribute("pageData", pageData);
+        return "search";
+    }
+}
