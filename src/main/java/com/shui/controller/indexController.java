@@ -23,13 +23,17 @@ public class indexController extends BaseController{
         return "index";
     }
 
+    /**
+     *  ES的搜索功能
+     *  q：关键字
+     */
     @RequestMapping("/search")
     public String search(String q) {
 
-        IPage pageData = searchService.search(getPage(), q);
+        IPage searchData = searchService.search(getPage(), q);
 
         request.setAttribute("q", q);
-        request.setAttribute("pageData", pageData);
+        request.setAttribute("searchData", searchData);
         return "search";
     }
 }

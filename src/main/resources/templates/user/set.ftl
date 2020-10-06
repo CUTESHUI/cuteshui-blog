@@ -21,13 +21,13 @@
                 <li class="layui-this" lay-id="info">我的资料</li>
                 <li lay-id="avatar">头像</li>
                 <li lay-id="pass">密码</li>
-                <li lay-id="bind">帐号绑定</li>
 
                 <@shiro.hasRole name="admin">
                 <li lay-id="es">同步ES</li>
                 </@shiro.hasRole>
             </ul>
             <div class="layui-tab-content" style="padding: 20px 0;">
+                <#--我的资料-->
                 <div class="layui-form layui-form-pane layui-tab-item layui-show">
                     <form method="post">
                         <div class="layui-form-item">
@@ -60,7 +60,7 @@
                         </div>
                     </form>
                 </div>
-
+                <#--头像-->
                 <div class="layui-form layui-form-pane layui-tab-item">
                     <div class="layui-form-item">
                         <div class="avatar-add">
@@ -73,7 +73,7 @@
                         </div>
                     </div>
                 </div>
-
+                <#--密码-->
                 <div class="layui-form layui-form-pane layui-tab-item">
                     <form action="/user/repass" method="post">
                         <div class="layui-form-item">
@@ -100,28 +100,7 @@
                         </div>
                     </form>
                 </div>
-
-                <div class="layui-form layui-form-pane layui-tab-item">
-                    <ul class="app-bind">
-                        <li class="fly-msg app-havebind">
-                            <i class="iconfont icon-qq"></i>
-                            <span>已成功绑定，您可以使用QQ帐号直接登录Fly社区，当然，您也可以</span>
-                            <a href="javascript:;" class="acc-unbind" type="qq_id">解除绑定</a>
-
-                            <!-- <a href="" onclick="layer.msg('正在绑定微博QQ', {icon:16, shade: 0.1, time:0})" class="acc-bind" type="qq_id">立即绑定</a>
-                            <span>，即可使用QQ帐号登录Fly社区</span> -->
-                        </li>
-                        <li class="fly-msg">
-                            <i class="iconfont icon-weibo"></i>
-                            <!-- <span>已成功绑定，您可以使用微博直接登录Fly社区，当然，您也可以</span>
-                            <a href="javascript:;" class="acc-unbind" type="weibo_id">解除绑定</a> -->
-
-                            <a href="" class="acc-weibo" type="weibo_id"  onclick="layer.msg('正在绑定微博', {icon:16, shade: 0.1, time:0})" >立即绑定</a>
-                            <span>，即可使用微博帐号登录Fly社区</span>
-                        </li>
-                    </ul>
-                </div>
-
+                <#--同步es-->
                 <@shiro.hasRole name="admin">
                     <div class="layui-form layui-form-pane layui-tab-item">
                         <form action="/admin/initEsData" method="post">

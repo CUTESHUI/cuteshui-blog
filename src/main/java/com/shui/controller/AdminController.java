@@ -41,24 +41,28 @@ public class AdminController extends BaseController {
     }
 
     /**
-     *
+     *  后台管理员手动全量同步到es，否则没有信息在es中，也就搜索不了
      */
     @ResponseBody
     @PostMapping("/initEsData")
     public Result initEsData() {
 
-        int size = 10000;
         Page page = new Page();
+        // 每页10000条
+        int size = 10000;
         page.setSize(size);
 
         long total = 0;
 
+        // 数据量大的时候要分页
         for (int i = 1; i < 1000; i ++) {
+            // 第i页
             page.setCurrent(i);
 
             IPage<PostVo> paging = mPostService.paging(page, null, null, null, null, null);
-
+            // es初始化了多少页
             int num = searchService.initEsData(paging.getRecords());
+
             total += num;
 
             // 当一页查不出10000条的时候，说明是最后一页了

@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
-@RabbitListener(queues = RabbitConfig.es_queue)
+@RabbitListener(queues = RabbitConfig.es_queue) // 监听哪个队列
 public class MqMessageHandler {
 
     @Autowired

@@ -43,6 +43,9 @@ public class BaseController {
     @Autowired
     SearchService searchService;
 
+    @Autowired
+    ChatService chatService;
+
     // 分页信息
     public Page getPage() {
         // pn：当前页面 page number

@@ -44,7 +44,7 @@ public class SearchServiceImpl implements SearchService {
         Long size = page.getSize(); // 每页几条
         Pageable pageable = PageRequest.of(current.intValue(), size.intValue());
 
-        // 搜索es得到jpa 的 pageData
+        // 搜索es，得到jpa的pageData
         // 多字段查询
         // 让 keywords 匹配 "title", "authorName", "categoryName"
         MultiMatchQueryBuilder multiMatchQueryBuilder = QueryBuilders.multiMatchQuery(keyword,
@@ -68,9 +68,11 @@ public class SearchServiceImpl implements SearchService {
         List<PostDocment> documents = new ArrayList<>();
         for(PostVo vo : records) {
             // 映射转换
+            // records 转为 PostDocment
             PostDocment postDocment = modelMapper.map(vo, PostDocment.class);
             documents.add(postDocment);
         }
+        // 保存到es
         postRepository.saveAll(documents);
         return documents.size();
     }
@@ -78,7 +80,8 @@ public class SearchServiceImpl implements SearchService {
     @Override
     public void createOrUpdateIndex(PostMqIndexMessage message) {
         Long postId = message.getPostId();
-        PostVo postVo = mPostService.selectOnePost(new QueryWrapper<MPost>().eq("p.id", postId));
+        PostVo postVo = mPostService.selectOnePost(new QueryWrapper<MPost>()
+                .eq("p.id", postId));
 
         PostDocment postDocment = modelMapper.map(postVo, PostDocment.class);
 

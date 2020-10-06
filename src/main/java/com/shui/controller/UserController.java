@@ -32,6 +32,9 @@ public class UserController extends BaseController {
     @Autowired
     UploadUtil uploadUtil;
 
+    /**
+     *  用户中心
+     */
     @GetMapping("/user/home")
     public String home() {
 
@@ -57,6 +60,9 @@ public class UserController extends BaseController {
         return "user/set";
     }
 
+    /**
+     *  基本设置，我的资料编辑
+     */
     @ResponseBody
     @PostMapping("/user/set")
     public Result doSet(MUser user) {
@@ -65,6 +71,7 @@ public class UserController extends BaseController {
 
             MUser temp = mUserService.getById(getProfileId());
             temp.setAvatar(user.getAvatar());
+            // 当前用户的头像更新到数据库
             mUserService.updateById(temp);
 
             AccountProfile profile = getProfile();
@@ -74,7 +81,7 @@ public class UserController extends BaseController {
 
             return Result.success().action("/user/set#avatar");
         }
-
+        // 改昵称前，首先判断昵称：是否为空、昵称在数据库中是否有了( 数量>1 )
         if(StrUtil.isBlank(user.getUsername())) {
             return Result.fail("昵称不能为空");
         }
@@ -105,7 +112,9 @@ public class UserController extends BaseController {
         return uploadUtil.upload(UploadUtil.type_avatar, file);
     }
 
-    // 重置密码
+    /**
+     *  重置密码
+     */
     @ResponseBody
     @PostMapping("/user/repass")
     public Result repass(String nowpass, String pass, String repass) {
@@ -132,17 +141,22 @@ public class UserController extends BaseController {
         return "/user/index";
     }
 
+    /**
+     *  我发布的文章
+     */
     @ResponseBody
     @GetMapping("/user/public")
     public Result userP() {
         IPage page = mPostService.page(getPage(), new QueryWrapper<MPost>()
                 .eq("user_id", getProfileId())
                 .orderByDesc("created"));
-
         return Result.success(page);
     }
 
-    // 我收藏的文章
+    /**
+     *  我收藏的文章
+     */
+
     @ResponseBody
     @GetMapping("/user/collection")
     public Result collection() {
@@ -152,7 +166,10 @@ public class UserController extends BaseController {
         return Result.success(page);
     }
 
-    // 判断用户是否收藏了文章
+    /**
+     *  判断用户是否收藏了文章
+     */
+
     @ResponseBody
     @PostMapping("/collection/find/")
     public Result collectionFind(Long pid) {
@@ -164,7 +181,9 @@ public class UserController extends BaseController {
         return Result.success(MapUtil.of("collection", count > 0 ));
     }
 
-    // 添加收藏
+    /**
+     *  添加收藏
+     */
     @ResponseBody
     @PostMapping("/collection/add/")
     public Result collectionAdd(Long pid) {
@@ -191,7 +210,9 @@ public class UserController extends BaseController {
         return Result.success();
     }
 
-    // 取消收藏
+    /**
+     *  取消收藏
+     */
     @ResponseBody
     @PostMapping("/collection/remove/")
     public Result collectionRemove(Long pid) {
@@ -239,6 +260,9 @@ public class UserController extends BaseController {
         return remove ? Result.success() : Result.fail("删除失败");
     }
 
+    /**
+     *  未读消息数量
+     */
     @ResponseBody
     @RequestMapping("/message/nums/")
     public Map msgNums() {

@@ -39,7 +39,9 @@ public class PostController extends BaseController{
         return "post/category";
     }
 
-    // 文章详情页面
+    /**
+     *  文章详情页面
+     */
     @GetMapping("/post/{id:\\d*}")
     public String detail(@PathVariable("id") Long id) {
 
@@ -121,10 +123,13 @@ public class PostController extends BaseController{
             mPostService.updateById(tempPost);
         }
 
-        // 通知消息给mq，告知更新或添加
-//        amqpTemplate.convertAndSend(RabbitConfig.es_exchage, RabbitConfig.es_bind_key,
-//                new PostMqIndexMessage(post.getId(), PostMqIndexMessage.CREATE_OR_UPDATE));
-//
+         // 通知消息给mq，告知更新或添加
+        amqpTemplate.convertAndSend(
+                RabbitConfig.es_exchange,
+                RabbitConfig.es_bind_key,
+                new PostMqIndexMessage(post.getId(), PostMqIndexMessage.CREATE_OR_UPDATE)
+        );
+
         return Result.success().action("/post/" + post.getId());
     }
 

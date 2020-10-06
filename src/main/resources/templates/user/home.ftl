@@ -19,11 +19,6 @@
 
       <p class="fly-home-sign">（${user.sign!'这个人好懒，什么都没留下！'}）</p>
 
-<#--      <div class="fly-sns" data-user="">-->
-<#--          <a href="javascript:;" class="layui-btn layui-btn-primary fly-imActive" data-type="addFriend">加为好友</a>-->
-<#--          <a href="javascript:;" class="layui-btn layui-btn-normal fly-imActive" data-type="chat">发起会话</a>-->
-<#--      </div>-->
-
   </div>
 
   <div class="layui-container">
@@ -42,7 +37,7 @@
                       </#list>
                       <#if !posts>
                           <div class="fly-none" style="min-height: 50px; padding:30px 0; height:auto;">
-                              <i style="font-size:14px;">没有发表任何求解</i>
+                              <i style="font-size:14px;">没有发表任何提问</i>
                           </div>
                       </#if>
                   </ul>

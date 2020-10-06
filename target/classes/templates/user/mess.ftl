@@ -25,6 +25,7 @@
 
                 <li data-id="${mess.id}">
                   <blockquote class="layui-elem-quote">
+
                     <#if mess.type == 0>
                     系统消息：${mess.content}
                     </#if>
