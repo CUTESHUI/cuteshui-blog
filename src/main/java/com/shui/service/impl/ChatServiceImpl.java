@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Slf4j
-@Service("chatService")
+@Service("chatsService")
 public class ChatServiceImpl implements ChatService {
 
     @Autowired
@@ -52,12 +52,12 @@ public class ChatServiceImpl implements ChatService {
 
     @Override
     public void setGroupHistoryMsg(ImMess imMess) {
-        redisUtil.lSet(Consts.IM_GROUP_HISTROY_MSG_KEY, imMess, 24 * 60 * 60);
+        redisUtil.lSet(Consts.IM_GROUP_HISTORY_MSG_KEY, imMess, 24 * 60 * 60);
     }
 
     @Override
     public List<Object> getGroupHistoryMsg(int count) {
-        long length = redisUtil.lGetListSize(Consts.IM_GROUP_HISTROY_MSG_KEY);
-        return redisUtil.lGet(Consts.IM_GROUP_HISTROY_MSG_KEY, length - count < 0 ? 0 : length - count, length);
+        long length = redisUtil.lGetListSize(Consts.IM_GROUP_HISTORY_MSG_KEY);
+        return redisUtil.lGet(Consts.IM_GROUP_HISTORY_MSG_KEY, length - count < 0 ? 0 : length - count, length);
     }
 }

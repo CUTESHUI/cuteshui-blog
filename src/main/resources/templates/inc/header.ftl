@@ -25,12 +25,6 @@
             <li class="layui-nav-item">
                 <a href="/register">注册</a>
             </li>
-            <li class="layui-nav-item layui-hide-xs">
-                <a href="/app/qq/" onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})" title="QQ登入" class="iconfont icon-qq"></a>
-            </li>
-            <li class="layui-nav-item layui-hide-xs">
-                <a href="/app/weibo/" onclick="layer.msg('正在通过微博登入', {icon:16, shade: 0.1, time:0})" title="微博登入" class="iconfont icon-weibo"></a>
-            </li>
             </@shiro.guest>
 
             <@shiro.user>
@@ -39,7 +33,6 @@
               <a class="fly-nav-avatar" href="javascript:;">
                 <cite class="layui-hide-xs"><@shiro.principal property="username" /></cite>
                 <i class="iconfont icon-renzheng layui-hide-xs" title="认证信息：layui 作者"></i>
-                <#--<i class="layui-badge fly-badge-vip layui-hide-xs">VIP3</i>-->
                 <img src="<@shiro.principal property="avatar" />">
               </a>
               <dl class="layui-nav-child">

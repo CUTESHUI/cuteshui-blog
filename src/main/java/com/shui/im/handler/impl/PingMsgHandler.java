@@ -8,6 +8,5 @@ public class PingMsgHandler implements MsgHandler {
 
     @Override
     public void handler(String data, WsRequest wsRequest, ChannelContext channelContext) {
-//        System.out.println("ping~~");
     }
 }

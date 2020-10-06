@@ -25,7 +25,7 @@
       <div class="layui-row layui-col-space15">
           <div class="layui-col-md6 fly-home-jie">
               <div class="fly-panel">
-                  <h3 class="fly-panel-title">${user.username} 最近的提问</h3>
+                  <h3 class="fly-panel-title">${user.username} 最近的发文 </h3>
                   <ul class="jie-row">
                       <#list posts as post>
                       <li>

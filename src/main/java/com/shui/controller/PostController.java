@@ -83,7 +83,7 @@ public class PostController extends BaseController{
         }
         // 分类信息
         request.setAttribute("categories", mCategoryService.list());
-        return "/post/edit";
+        return "post/edit";
     }
 
     /**

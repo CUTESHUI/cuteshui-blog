@@ -21,6 +21,5 @@ public class Consts {
     public final static String IM_MESS_TYPE_CHAT = "chatMessage";
 
     public static final String IM_ONLINE_MEMBERS_KEY = "online_members_key";
-    public static final String IM_GROUP_HISTROY_MSG_KEY = "group_histroy_msg_key";
-
+    public static final String IM_GROUP_HISTORY_MSG_KEY = "group_history_msg_key";
 }

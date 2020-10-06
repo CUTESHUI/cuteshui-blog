@@ -33,7 +33,7 @@ tio.ws = function ($, layim) {
         socket.onmessage = function (res) {
             console.log("接收到消息！！")
             console.log(res)
-
+            // 将json转为对象
             var msgBody = eval('(' + res.data + ')');
             if(msgBody.emit === 'chatMessage'){
                 layim.getMessage(msgBody.data);
@@ -75,7 +75,7 @@ tio.ws = function ($, layim) {
     }
 
     this.initHistoryMess = function () {
-        localStorage.clear();
+        localStorage.clear(); // 清除缓存
         $.ajax({
             url: '/chat/getGroupHistoryMsg',
             success: function (res) {

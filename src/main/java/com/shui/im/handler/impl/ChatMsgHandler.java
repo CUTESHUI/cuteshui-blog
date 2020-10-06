@@ -12,6 +12,7 @@ import com.shui.im.vo.ImUser;
 import com.shui.service.ChatService;
 import com.shui.util.SpringUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 import org.tio.core.ChannelContext;
 import org.tio.core.Tio;
 import org.tio.websocket.common.WsRequest;
@@ -20,6 +21,7 @@ import org.tio.websocket.common.WsResponse;
 import java.util.Date;
 
 @Slf4j
+@Service("chatService")
 public class ChatMsgHandler implements MsgHandler {
     @Override
     public void handler(String data, WsRequest wsRequest, ChannelContext channelContext) {
@@ -27,8 +29,6 @@ public class ChatMsgHandler implements MsgHandler {
 
         ImUser mine = chatImMess.getMine();
         ImTo to = chatImMess.getTo();
-
-        // 特殊处理？？
 
         ImMess imMess = new ImMess();
         imMess.setContent(mine.getContent());
@@ -51,14 +51,16 @@ public class ChatMsgHandler implements MsgHandler {
         log.info("群聊消息----------> {}", result);
 
         WsResponse wsResponse = WsResponse.fromText(result, "utf-8");
-
+        // 过滤 发之前
+        // 如果当前通道和群聊通道一样，就无法发
+        // 避免了重复，大家都用群聊通道
         ExculdeMineChannelContextFilter filter = new ExculdeMineChannelContextFilter();
         filter.setCurrentContext(channelContext);
 
         Tio.sendToGroup(channelContext.getGroupContext(), Consts.IM_GROUP_NAME, wsResponse, filter);
 
         //保存群聊信息
-        ChatService chatService = (ChatService) SpringUtil.getBean("chatService");
+        ChatService chatService = (ChatService) SpringUtil.getBean("chatsService");
         chatService.setGroupHistoryMsg(imMess);
 
     }

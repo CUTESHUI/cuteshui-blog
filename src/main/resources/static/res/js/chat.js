@@ -20,12 +20,11 @@ layui.use('layim', function(layim){
 
     var tiows = new tio.ws($, layim);
 
+    // 历史聊天信息回显
+    tiows.initHistoryMess();
 
     // 获取个人、群聊信息，并打开聊天窗口
     tiows.openChatWindow();
-
-    // 历史聊天信息回显
-    tiows.initHistoryMess();
 
     // 建立连接ws
     tiows.connect();
