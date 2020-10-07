@@ -156,7 +156,6 @@ public class UserController extends BaseController {
     /**
      *  我收藏的文章
      */
-
     @ResponseBody
     @GetMapping("/user/collection")
     public Result collection() {
@@ -169,7 +168,6 @@ public class UserController extends BaseController {
     /**
      *  判断用户是否收藏了文章
      */
-
     @ResponseBody
     @PostMapping("/collection/find/")
     public Result collectionFind(Long pid) {

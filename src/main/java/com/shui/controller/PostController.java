@@ -27,7 +27,9 @@ import java.util.Date;
 @Controller
 public class PostController extends BaseController{
 
-    // 分类页面(提问...)
+    /**
+     *  分类页面(提问...)
+     */
     @GetMapping("/category/{id:\\d*}") // "\\d*" 表示接收的数据类型只能是数字类型
     public String category(@PathVariable("id") Long id) {
 
