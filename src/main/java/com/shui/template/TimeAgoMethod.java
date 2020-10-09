@@ -35,7 +35,7 @@ public class TimeAgoMethod extends DirectiveHandler.BaseMethod {
         if (null == date) {
             return ONE_UNKNOWN;
         }
-        long delta = new Date().getTime() - date.getTime();
+        long delta = System.currentTimeMillis() - date.getTime();
         if (delta < 1L * ONE_MINUTE) {
             long seconds = toSeconds(delta);
             return (seconds <= 0 ? 1 : seconds) + ONE_SECOND_AGO;

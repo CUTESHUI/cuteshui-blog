@@ -20,7 +20,7 @@ public class ChatController extends BaseController {
     public Result getMineAndGroupData() {
 
         //默认群
-        Map<String, Object> group = new HashMap<>();
+        Map<String, Object> group = new HashMap<>(16);
         group.put("name", "社区群聊");
         group.put("type", "group");
         group.put("avatar", "http://tp1.sinaimg.cn/5619439268/180/40030060651/1");

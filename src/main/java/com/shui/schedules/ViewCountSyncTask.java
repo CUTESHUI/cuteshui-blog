@@ -42,7 +42,9 @@ public class ViewCountSyncTask {
             }
         }
 
-        if(ids.isEmpty()) return;
+        if(ids.isEmpty()) {
+            return;
+        }
 
         // 需要更新阅读量的文章
         List<MPost> posts = mPostService.list(new QueryWrapper<MPost>().in("id", ids));
@@ -53,7 +55,9 @@ public class ViewCountSyncTask {
             post.setViewCount(viewCount);
         });
 
-        if(posts.isEmpty()) return;
+        if(posts.isEmpty()) {
+            return;
+        }
 
         boolean isSuccess = mPostService.updateBatchById(posts);
 

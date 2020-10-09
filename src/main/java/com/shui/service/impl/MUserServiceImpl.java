@@ -37,7 +37,9 @@ public class MUserServiceImpl extends ServiceImpl<MUserMapper, MUser> implements
                 .or()
                 .eq("username", user.getUsername())
         );
-        if(count > 0) return Result.fail("用户名或邮箱已被占用");
+        if(count > 0) {
+            return Result.fail("用户名或邮箱已被占用");
+        }
 
         MUser temp = new MUser();
         temp.setUsername(user.getUsername());

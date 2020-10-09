@@ -32,7 +32,7 @@ public class WeekRankTemplate extends TemplateDirective {
         List<Map> weekRankPosts = new ArrayList<>();
 
         for (ZSetOperations.TypedTuple dayRank : weekRank) {
-            Map<String, Object> map = new HashMap<>();
+            Map<String, Object> map = new HashMap<>(16);
 
             Object postId = dayRank.getValue();
             // rank:post:postId 用于热议的post

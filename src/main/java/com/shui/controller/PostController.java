@@ -196,7 +196,7 @@ public class PostController extends BaseController{
 
         // 通知作者，有人评论了你的文章
         // 作者自己评论自己文章，不需要通知
-        if(comment.getUserId() != post.getUserId()) {
+        if(!comment.getUserId().equals(post.getUserId())) {
             MUserMessage message = new MUserMessage();
             message.setPostId(jid);
             message.setCommentId(comment.getId());

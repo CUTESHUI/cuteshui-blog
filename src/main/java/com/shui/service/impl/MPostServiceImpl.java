@@ -40,7 +40,9 @@ public class MPostServiceImpl extends ServiceImpl<MPostMapper, MPost> implements
     @Override
     public IPage<PostVo> paging(Page page, Long categoryId, Long userId, Integer level, Boolean recommend, String order) {
 
-        if (level == null) level = -1;
+        if (level == null) {
+            level = -1;
+        }
 
         QueryWrapper wrapper = new QueryWrapper<MPost>()
                 .eq(categoryId != null, "category_id", categoryId)

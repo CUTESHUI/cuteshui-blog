@@ -37,7 +37,9 @@ public class MUserMessageServiceImpl extends ServiceImpl<MUserMessageMapper, MUs
 
     @Override
     public void updateToReaded(List<Long> ids) {
-        if(ids.isEmpty()) return;
+        if(ids.isEmpty()) {
+            return;
+        }
 
         mUserMessageMapper.updateToReaded(new QueryWrapper<MUserMessage>()
                 .in("id", ids)
