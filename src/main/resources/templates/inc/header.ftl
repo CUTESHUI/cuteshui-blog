@@ -1,8 +1,8 @@
 <div class="fly-header layui-bg-black">
     <div class="layui-container">
-        <a class="fly-logo" href="/">
-            <img src="https://www.markerhub.com/dist/images/logo/markerhub-logo.png" alt="CUTESHUI" style="height: 41px;">
-        </a>
+<#--        <a class="fly-logo" href="/">-->
+<#--            <img src="https://www.markerhub.com/dist/images/logo/markerhub-logo.png" alt="CUTESHUI" style="height: 41px;">-->
+<#--        </a>-->
         <ul class="layui-nav fly-nav layui-hide-xs">
             <li class="layui-nav-item layui-this">
                 <a href="/"><i class="layui-icon">&#xe68e;</i>主页</a>

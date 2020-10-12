@@ -55,10 +55,11 @@ public class ShiroConfig {
         hashMap.put("/user/mess", "auth");
         hashMap.put("/msg/remove/", "auth");
         hashMap.put("/message/nums/", "auth");
+
         // ajax请求
-        hashMap.put("/collection/remove/", "auth"); // 添加收藏
-        hashMap.put("/collection/find/", "auth");   // 当前用户有没有收藏这篇文章
-        hashMap.put("/collection/add/", "auth");    // 取消收藏
+        hashMap.put("/collection/remove/", "auth");
+        hashMap.put("/collection/find/", "auth");
+        hashMap.put("/collection/add/", "auth");
 
         hashMap.put("/post/edit", "auth");
         hashMap.put("/post/submit", "auth");

@@ -9,7 +9,6 @@ import java.util.List;
 
 public interface SearchService {
 
-    //
     IPage search(Page page, String keyword);
 
     int initEsData(List<PostVo> records);

@@ -1,6 +1,5 @@
 package com.shui.search.mq;
 
-
 import com.shui.config.RabbitConfig;
 import com.shui.service.SearchService;
 import lombok.extern.slf4j.Slf4j;
@@ -9,9 +8,13 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ *  提交/删除文章时
+ *  异步发消息：es 更新/删除索引
+ */
 @Slf4j
 @Component
-@RabbitListener(queues = RabbitConfig.es_queue) // 监听哪个队列
+@RabbitListener(queues = RabbitConfig.es_queue)
 public class MqMessageHandler {
 
     @Autowired

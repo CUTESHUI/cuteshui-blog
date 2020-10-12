@@ -40,8 +40,8 @@ public class SearchServiceImpl implements SearchService {
 
         // 分页信息
         // mybatis plus的page 转成 jpa的page
-        Long current = page.getCurrent() - 1; // 当前页
-        Long size = page.getSize(); // 每页几条
+        Long current = page.getCurrent() - 1;
+        Long size = page.getSize();
         Pageable pageable = PageRequest.of(current.intValue(), size.intValue());
 
         // 搜索es，得到jpa的pageData
@@ -59,6 +59,9 @@ public class SearchServiceImpl implements SearchService {
         return pageData;
     }
 
+    /**
+     *  初始化页数
+     */
     @Override
     public int initEsData(List<PostVo> records) {
         if(records == null || records.isEmpty()) {
@@ -68,7 +71,7 @@ public class SearchServiceImpl implements SearchService {
         List<PostDocment> documents = new ArrayList<>();
         for(PostVo vo : records) {
             // 映射转换
-            // records 转为 PostDocment
+            // records 转为 PostDocument
             PostDocment postDocment = modelMapper.map(vo, PostDocment.class);
             documents.add(postDocment);
         }
@@ -77,12 +80,16 @@ public class SearchServiceImpl implements SearchService {
         return documents.size();
     }
 
+    /**
+     *  订阅mq，更新es索引
+     */
     @Override
     public void createOrUpdateIndex(PostMqIndexMessage message) {
         Long postId = message.getPostId();
         PostVo postVo = mPostService.selectOnePost(new QueryWrapper<MPost>()
                 .eq("p.id", postId));
 
+        // bean之间转换
         PostDocment postDocment = modelMapper.map(postVo, PostDocment.class);
 
         postRepository.save(postDocment);
@@ -90,6 +97,9 @@ public class SearchServiceImpl implements SearchService {
         log.info("es 索引更新成功！ ---> {}", postDocment.toString());
     }
 
+    /**
+     *  订阅mq，删除es索引
+     */
     @Override
     public void removeIndex(PostMqIndexMessage message) {
         Long postId = message.getPostId();

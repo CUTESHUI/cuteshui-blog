@@ -7,5 +7,5 @@ import lombok.Data;
 public class CommentVo extends MComment {
     private Long authorId;
     private String authorName;
-    private String authorAvatar; // 头像
+    private String authorAvatar;
 }

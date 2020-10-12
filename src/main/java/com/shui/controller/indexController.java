@@ -30,7 +30,8 @@ public class indexController extends BaseController{
     @RequestMapping("/search")
     public String search(String q) {
 
-        IPage searchData = searchService.search(getPage(), q);
+        IPage searchData = searchService.
+                search(getPage(), q);
 
         request.setAttribute("q", q);
         request.setAttribute("searchData", searchData);

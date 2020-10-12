@@ -48,8 +48,9 @@ public class PostController extends BaseController{
     public String detail(@PathVariable("id") Long id) {
 
         // 获取无分页信息的，指定id的文章，也就是当前文章
+        // postId mapper里
         PostVo vo = mPostService.selectOnePost(new QueryWrapper<MPost>()
-                .eq("p.id", id)); // postId mapper里
+                .eq("p.id", id));
         // 断言vo不为空，当vo为空
         Assert.notNull(vo, "文章已被删除");
 
@@ -227,7 +228,7 @@ public class PostController extends BaseController{
                 message.setType(2);
                 message.setContent(content);
                 message.setCreated(new Date());
-                message.setStatus(0); // 未读
+                message.setStatus(0);
                 messageService.save(message);
 
                 // 即时通知被@的用户

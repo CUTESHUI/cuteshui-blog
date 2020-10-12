@@ -33,7 +33,8 @@ public class ChatMsgHandler implements MsgHandler {
         ImMess imMess = new ImMess();
         imMess.setContent(mine.getContent());
         imMess.setAvatar(mine.getAvatar());
-        imMess.setMine(false); // 是否是我发送的消息
+        // 是否是我发送的消息
+        imMess.setMine(false);
 
         imMess.setUsername(mine.getUsername());
         imMess.setFromid(mine.getId());

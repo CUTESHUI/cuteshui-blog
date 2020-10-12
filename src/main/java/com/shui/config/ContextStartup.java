@@ -28,8 +28,9 @@ public class ContextStartup implements ApplicationRunner, ServletContextAware {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
+        // 0 表示上线
         List<MCategory> categories = mCategoryService.list(new QueryWrapper<MCategory>()
-                .eq("status", 0)); // 0 表示上线
+                .eq("status", 0));
         servletContext.setAttribute("categorys", categories);
 
         // 初始化 本周热议
