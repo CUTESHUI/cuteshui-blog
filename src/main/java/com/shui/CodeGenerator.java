@@ -120,6 +120,7 @@ public class CodeGenerator {
         strategy.setTablePrefix(pc.getModuleName() + "_");
         mpg.setStrategy(strategy);
         mpg.setTemplateEngine(new FreemarkerTemplateEngine());
+
         mpg.execute();
     }
 }

@@ -33,7 +33,7 @@ public class MCommentServiceImpl extends ServiceImpl<MCommentMapper, MComment> i
         QueryWrapper wrapper = new QueryWrapper<MComment>()
                 .eq(postId != null,"post_id", postId)
                 .eq(UserId != null, "user_id", UserId)
-                .orderByDesc(order != null, order); //倒序
+                .orderByDesc(order != null, order);
 
         // 1分页，评论内容id，评论用户id
         // 返回评论信息列表

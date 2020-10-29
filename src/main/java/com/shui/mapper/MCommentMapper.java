@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.shui.entity.MComment;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.shui.vo.CommentVo;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 
