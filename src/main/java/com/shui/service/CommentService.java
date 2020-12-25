@@ -14,7 +14,7 @@ import com.shui.dto.CommentDTO;
 public interface CommentService extends IService<Comment> {
 
     /**
-     *   1分页，评论内容id，评论用户id
+     *  1分页，评论内容id，评论用户id
      */
     IPage<CommentDTO> paging(Page page, Long postId, Long UserId, String order);
 }

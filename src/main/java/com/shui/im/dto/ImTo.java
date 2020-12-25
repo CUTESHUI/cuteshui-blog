@@ -1,4 +1,4 @@
-package com.shui.im.vo;
+package com.shui.im.dto;
 
 import lombok.Data;
 

@@ -17,10 +17,7 @@ import org.springframework.stereotype.Service;
  * @since 2020-09-24
  */
 @Service
-public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> implements CommentService {
-
-    @Autowired
-    private CommentMapper commentMapper;
+public class CommentServiceImpl extends BaseServiceImpl<CommentMapper, Comment> implements CommentService {
 
     @Override
     public IPage<CommentDTO> paging(Page page, Long postId, Long UserId, String order) {

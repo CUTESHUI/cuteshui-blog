@@ -10,12 +10,7 @@ import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
-public class WebsocketServiceImpl implements WebsocketService {
-
-    @Autowired
-    private UserMessageService userMessageService;
-    @Autowired
-    private SimpMessagingTemplate simpMessagingTemplate;
+public class WebsocketServiceImpl extends BaseServiceImpl implements WebsocketService {
 
     @Async
     @Override

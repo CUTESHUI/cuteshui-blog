@@ -28,6 +28,7 @@ public abstract class TemplateDirective implements TemplateDirectiveModel {
     }
 
     abstract public String getName();
+
     abstract public void execute(DirectiveHandler handler) throws Exception;
 
 }

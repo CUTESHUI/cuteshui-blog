@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Properties;
 
 /**
- *  图片验证码配置
+ * 图片验证码配置
  */
 @Configuration
 public class KaptchaConfig {

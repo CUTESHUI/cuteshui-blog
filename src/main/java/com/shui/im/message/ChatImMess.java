@@ -1,7 +1,7 @@
 package com.shui.im.message;
 
-import com.shui.im.vo.ImTo;
-import com.shui.im.vo.ImUser;
+import com.shui.im.dto.ImTo;
+import com.shui.im.dto.ImUser;
 import lombok.Data;
 
 @Data

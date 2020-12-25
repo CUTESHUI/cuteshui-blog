@@ -1,18 +1,20 @@
 package com.shui.service.impl;
 
+import cn.hutool.core.map.MapUtil;
 import cn.hutool.core.util.RandomUtil;
 import com.shui.common.lang.Consts;
-import com.shui.im.vo.ImMess;
-import com.shui.im.vo.ImUser;
+import com.shui.common.lang.Result;
+import com.shui.im.dto.ImMess;
+import com.shui.im.dto.ImUser;
 import com.shui.service.ChatService;
 import com.shui.shiro.AccountProfile;
-import com.shui.util.RedisUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -21,10 +23,7 @@ import java.util.List;
  */
 @Slf4j
 @Service("chatsService")
-public class ChatServiceImpl implements ChatService {
-
-    @Autowired
-    private RedisUtil redisUtil;
+public class ChatServiceImpl extends BaseServiceImpl implements ChatService {
 
     @Override
     public ImUser getCurrentUser() {
@@ -64,5 +63,23 @@ public class ChatServiceImpl implements ChatService {
     public List<Object> getGroupHistoryMsg(int count) {
         long length = redisUtil.lGetListSize(Consts.IM_GROUP_HISTORY_MSG_KEY);
         return redisUtil.lGet(Consts.IM_GROUP_HISTORY_MSG_KEY, length - count < 0 ? 0 : length - count, length);
+    }
+
+    @Override
+    public Result getMineAndGroupData() {
+
+        //默认群
+        Map<String, Object> group = new HashMap<>(16);
+        group.put("name", "社区群聊");
+        group.put("type", "group");
+        group.put("avatar", "http://tp1.sinaimg.cn/5619439268/180/40030060651/1");
+        group.put("id", Consts.IM_GROUP_ID);
+        group.put("members", 0);
+
+        ImUser user = chatService.getCurrentUser();
+        return Result.success(MapUtil.builder()
+                .put("group", group)
+                .put("mine", user)
+                .map());
     }
 }

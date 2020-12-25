@@ -12,7 +12,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class MvcConfig implements WebMvcConfigurer {
 
     @Autowired
-    Consts consts;
+    private Consts consts;
+
     @Bean
     ModelMapper modelMapper() {
         return new ModelMapper();

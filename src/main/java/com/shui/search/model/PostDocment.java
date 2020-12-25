@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- *  启动的时候自动创建文档库
+ * 启动的时候自动创建文档库
  */
 @Data
 @Document(indexName="post", type="post", createIndex=true)
@@ -19,14 +19,18 @@ public class PostDocment implements Serializable {
     @Id
     private Long id;
 
-    // ik分词器
+    /**
+     * ik分词器
+     */
     @Field(type = FieldType.Text, searchAnalyzer="ik_smart", analyzer = "ik_max_word")
     private String title;
 
     @Field(type = FieldType.Long)
     private Long authorId;
 
-    // 关键字分词，不需要分词
+    /**
+     * 关键字分词，不需要分词
+     */
     @Field(type = FieldType.Keyword)
     private String authorName;
     private String authorAvatar;

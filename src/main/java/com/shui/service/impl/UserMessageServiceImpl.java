@@ -19,10 +19,7 @@ import java.util.List;
  * @since 2020-09-24
  */
 @Service
-public class UserMessageServiceImpl extends ServiceImpl<UserMessageMapper, UserMessage> implements UserMessageService {
-
-    @Autowired
-    private UserMessageMapper userMessageMapper;
+public class UserMessageServiceImpl extends BaseServiceImpl<UserMessageMapper, UserMessage> implements UserMessageService {
 
     @Override
     public IPage<UserMessageDTO> paging(Page page, QueryWrapper<UserMessage> wrapper) {

@@ -14,7 +14,7 @@ import javax.servlet.ServletContext;
 import java.util.List;
 
 /**
- *  项目启动时就会调用run里的内容，也就可以自定义，注入数据库中的信息
+ * 项目启动时就会调用run里的内容，也就可以自定义，注入数据库中的信息
  */
 @Component
 public class ContextStartup implements ApplicationRunner, ServletContextAware {

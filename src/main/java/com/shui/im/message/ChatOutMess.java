@@ -1,6 +1,6 @@
 package com.shui.im.message;
 
-import com.shui.im.vo.ImMess;
+import com.shui.im.dto.ImMess;
 import lombok.Data;
 
 @Data

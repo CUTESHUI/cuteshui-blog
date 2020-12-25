@@ -13,7 +13,9 @@ import java.io.IOException;
 @Configuration
 public class ImServerConfig {
 
-    // 指定端口
+    /**
+     * 指定端口
+     */
     @Value("${im.server.port}")
     private int imPort;
 

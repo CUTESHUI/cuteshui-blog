@@ -24,16 +24,7 @@ import java.util.List;
 
 @Slf4j
 @Service
-public class SearchServiceImpl implements SearchService {
-
-    @Autowired
-    private PostRepository postRepository;
-
-    @Autowired
-    private ModelMapper modelMapper;
-
-    @Autowired
-    private PostService postService;
+public class SearchServiceImpl extends BaseServiceImpl implements SearchService {
 
     @Override
     public IPage search(Page page, String keyword) {
@@ -59,9 +50,6 @@ public class SearchServiceImpl implements SearchService {
         return pageData;
     }
 
-    /**
-     *  初始化页数
-     */
     @Override
     public int initEsData(List<PostDTO> records) {
         if(records == null || records.isEmpty()) {
@@ -80,9 +68,6 @@ public class SearchServiceImpl implements SearchService {
         return documents.size();
     }
 
-    /**
-     *  订阅mq，更新es索引
-     */
     @Override
     public void createOrUpdateIndex(PostMqIndexMessage message) {
         Long postId = message.getPostId();
@@ -97,9 +82,6 @@ public class SearchServiceImpl implements SearchService {
         log.info("es 索引更新成功！ ---> {}", postDocment.toString());
     }
 
-    /**
-     *  订阅mq，删除es索引
-     */
     @Override
     public void removeIndex(PostMqIndexMessage message) {
         Long postId = message.getPostId();

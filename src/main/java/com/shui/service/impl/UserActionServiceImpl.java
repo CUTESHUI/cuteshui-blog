@@ -12,6 +12,6 @@ import org.springframework.stereotype.Service;
  * @since 2020-09-24
  */
 @Service
-public class UserActionServiceImpl extends ServiceImpl<UserActionMapper, UserAction> implements UserActionService {
+public class UserActionServiceImpl extends BaseServiceImpl<UserActionMapper, UserAction> implements UserActionService {
 
 }
