@@ -1,9 +1,9 @@
 package com.shui.config;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.shui.entity.MCategory;
-import com.shui.service.MCategoryService;
-import com.shui.service.MPostService;
+import com.shui.entity.Category;
+import com.shui.service.CategoryService;
+import com.shui.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -20,21 +20,21 @@ import java.util.List;
 public class ContextStartup implements ApplicationRunner, ServletContextAware {
 
     @Autowired
-    MCategoryService mCategoryService;
-    ServletContext servletContext;
-
+    private CategoryService categoryService;
     @Autowired
-    MPostService mPostService;
+    private ServletContext servletContext;
+    @Autowired
+    PostService postService;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
         // 0 表示上线
-        List<MCategory> categories = mCategoryService.list(new QueryWrapper<MCategory>()
+        List<Category> categories = categoryService.list(new QueryWrapper<Category>()
                 .eq("status", 0));
         servletContext.setAttribute("categorys", categories);
 
         // 初始化 本周热议
-        mPostService.initWeekRank();
+        postService.initWeekRank();
     }
 
     @Override

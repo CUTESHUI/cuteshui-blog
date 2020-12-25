@@ -1,6 +1,5 @@
 package com.shui.config;
 
-
 import com.shui.im.handler.MsgHandlerFactory;
 import com.shui.im.server.ImServerStarter;
 import lombok.extern.slf4j.Slf4j;
@@ -14,7 +13,8 @@ import java.io.IOException;
 @Configuration
 public class ImServerConfig {
 
-    @Value("${im.server.port}") // 指定端口
+    // 指定端口
+    @Value("${im.server.port}")
     private int imPort;
 
     @Bean

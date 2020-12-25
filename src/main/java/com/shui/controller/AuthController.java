@@ -4,7 +4,7 @@ import cn.hutool.core.util.StrUtil;
 import cn.hutool.crypto.SecureUtil;
 import com.google.code.kaptcha.Producer;
 import com.shui.common.lang.Result;
-import com.shui.entity.MUser;
+import com.shui.entity.User;
 import com.shui.util.ValidationUtil;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
@@ -27,20 +27,18 @@ public class AuthController extends BaseController {
     private static final String KAPTCHA_SESSION_KEY = "KAPTCHA_SESSION_KEY";
 
     @Autowired
-    Producer producer;
+    private Producer producer;
 
     /**
      *  通用图片验证码
      */
     @GetMapping("/capthca.jpg")
     public void kaptcha(HttpServletResponse resp) throws IOException {
-
         // 验证码文本
         String text = producer.createText();
         // 文本对应的图片
         BufferedImage image = producer.createImage(text);
         request.getSession().setAttribute(KAPTCHA_SESSION_KEY, text);
-
         // 不缓存
         resp.setHeader("Cache-Control", "no-store, no-cache");
         // 图片类型
@@ -88,11 +86,10 @@ public class AuthController extends BaseController {
 
     @ResponseBody
     @PostMapping("/register")
-    public Result doRegister(MUser user, String repass, String vercode) {
-
-        ValidationUtil.ValidResult validResult = ValidationUtil.validateBean(user);
-        if(validResult.hasErrors()) {
-            return Result.fail(validResult.getErrors());
+    public Result doRegister(User user, String repass, String vercode) {
+        // 校验
+        if(ValidationUtil.validateBean(user).hasErrors()) {
+            return Result.fail(ValidationUtil.validateBean(user).getErrors());
         }
 
         if(!user.getPassword().equals(repass)) {
@@ -106,7 +103,7 @@ public class AuthController extends BaseController {
         }
 
         // 完成注册
-        Result result = mUserService.register(user);
+        Result result = userService.register(user);
         return result.action("/login");
     }
 

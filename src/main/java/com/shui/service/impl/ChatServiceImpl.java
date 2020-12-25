@@ -14,12 +14,17 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ *
+ * @author CUTESHUI
+ * @since 2020-09-24
+ */
 @Slf4j
 @Service("chatsService")
 public class ChatServiceImpl implements ChatService {
 
     @Autowired
-    RedisUtil redisUtil;
+    private RedisUtil redisUtil;
 
     @Override
     public ImUser getCurrentUser() {

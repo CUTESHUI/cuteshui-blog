@@ -1,20 +1,22 @@
 package com.shui.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.shui.vo.PostVo;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-
+/**
+ * 首页、默认页相关
+ * @author CUTESHUI
+ * @since 2020-09-24
+ */
 @Controller
 public class indexController extends BaseController{
 
     @RequestMapping({"", "/", "index"})
     public String index() {
-
         // 获取当前文章列表
         // 1分页信息、2分类信息、3用户、4置顶、5精选、6排序
-        IPage results = mPostService.paging(getPage(), null, null, null, null, "created");
+        IPage results = postService.paging(getPage(), null, null, null, null, "created");
 
         request.setAttribute("pageData", results);
 
@@ -29,9 +31,7 @@ public class indexController extends BaseController{
      */
     @RequestMapping("/search")
     public String search(String q) {
-
-        IPage searchData = searchService.
-                search(getPage(), q);
+        IPage searchData = searchService.search(getPage(), q);
 
         request.setAttribute("q", q);
         request.setAttribute("searchData", searchData);

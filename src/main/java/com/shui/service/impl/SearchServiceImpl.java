@@ -3,13 +3,13 @@ package com.shui.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.shui.entity.MPost;
+import com.shui.entity.Post;
 import com.shui.search.model.PostDocment;
 import com.shui.search.mq.PostMqIndexMessage;
 import com.shui.search.repository.PostRepository;
-import com.shui.service.MPostService;
+import com.shui.service.PostService;
 import com.shui.service.SearchService;
-import com.shui.vo.PostVo;
+import com.shui.dto.PostDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.elasticsearch.index.query.MultiMatchQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
@@ -27,13 +27,13 @@ import java.util.List;
 public class SearchServiceImpl implements SearchService {
 
     @Autowired
-    PostRepository postRepository;
+    private PostRepository postRepository;
 
     @Autowired
-    ModelMapper modelMapper;
+    private ModelMapper modelMapper;
 
     @Autowired
-    MPostService mPostService;
+    private PostService postService;
 
     @Override
     public IPage search(Page page, String keyword) {
@@ -63,13 +63,13 @@ public class SearchServiceImpl implements SearchService {
      *  初始化页数
      */
     @Override
-    public int initEsData(List<PostVo> records) {
+    public int initEsData(List<PostDTO> records) {
         if(records == null || records.isEmpty()) {
             return 0;
         }
 
         List<PostDocment> documents = new ArrayList<>();
-        for(PostVo vo : records) {
+        for(PostDTO vo : records) {
             // 映射转换
             // records 转为 PostDocument
             PostDocment postDocment = modelMapper.map(vo, PostDocment.class);
@@ -86,7 +86,7 @@ public class SearchServiceImpl implements SearchService {
     @Override
     public void createOrUpdateIndex(PostMqIndexMessage message) {
         Long postId = message.getPostId();
-        PostVo postVo = mPostService.selectOnePost(new QueryWrapper<MPost>()
+        PostDTO postVo = postService.selectOnePost(new QueryWrapper<Post>()
                 .eq("p.id", postId));
 
         // bean之间转换

@@ -20,10 +20,10 @@ import java.util.Date;
 @Component
 public class UploadUtil {
 
-    @Autowired
-    Consts consts;
+    public final static String TYPE_AVATAR = "avatar";
 
-    public final static String type_avatar = "avatar";
+    @Autowired
+    private Consts consts;
 
     public Result upload(String type, MultipartFile file) throws IOException {
 

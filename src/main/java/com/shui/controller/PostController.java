@@ -3,15 +3,16 @@ package com.shui.controller;
 import cn.hutool.core.map.MapUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.shui.common.lang.Result;
 import com.shui.config.RabbitConfig;
-import com.shui.entity.*;
+import com.shui.entity.Comment;
+import com.shui.entity.Post;
+import com.shui.entity.User;
+import com.shui.entity.UserMessage;
 import com.shui.search.mq.PostMqIndexMessage;
-import com.shui.service.WebsocketService;
 import com.shui.util.ValidationUtil;
-import com.shui.vo.CommentVo;
-import com.shui.vo.PostVo;
+import com.shui.dto.CommentDTO;
+import com.shui.dto.PostDTO;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
@@ -24,6 +25,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Date;
 
+/**
+ * 文章相关
+ * @author CUTESHUI
+ * @since 2020-09-24
+ */
 @Controller
 public class PostController extends BaseController{
 
@@ -49,21 +55,20 @@ public class PostController extends BaseController{
 
         // 获取无分页信息的，指定id的文章，也就是当前文章
         // postId mapper里
-        PostVo vo = mPostService.selectOnePost(new QueryWrapper<MPost>()
-                .eq("p.id", id));
+        PostDTO dto = postService.selectOnePost(new QueryWrapper<Post>().eq("p.id", id));
         // 断言vo不为空，当vo为空
-        Assert.notNull(vo, "文章已被删除");
+        Assert.notNull(dto, "文章已被删除");
 
         // 评论
         // 获取当前文章的评论列表，需要分页
         // 1分页，评论内容id，评论用户id
-        IPage<CommentVo> results = mCommentService.paging(commentPage(), vo.getId(), null, "created");
+        IPage<CommentDTO> results = commentService.paging(commentPage(), dto.getId(), null, "created");
 
         // 阅读量
-        mPostService.updateViewCount(vo);
+        postService.updateViewCount(dto);
 
-        request.setAttribute("currentCategoryId", vo.getCategoryId());
-        request.setAttribute("post", vo);
+        request.setAttribute("currentCategoryId", dto.getCategoryId());
+        request.setAttribute("post", dto);
         request.setAttribute("commentData", results);
         return "post/detail";
     }
@@ -79,13 +84,13 @@ public class PostController extends BaseController{
         // 编辑
         if(!StringUtils.isEmpty(id)) {
             // 当前文章
-            MPost post = mPostService.getById(id);
+            Post post = postService.getById(id);
             Assert.notNull(post, "该文章已被删除");
             Assert.isTrue(post.getUserId().longValue() == getProfileId().longValue(), "没权限操作此文章");
             request.setAttribute("post", post);
         }
         // 分类信息
-        request.setAttribute("categories", mCategoryService.list());
+        request.setAttribute("categories", categoryService.list());
         return "post/edit";
     }
 
@@ -94,16 +99,14 @@ public class PostController extends BaseController{
      */
     @ResponseBody
     @PostMapping("/post/submit")
-    public Result submit(MPost post) {
+    public Result submit(Post post) {
         // 表单验证
-        ValidationUtil.ValidResult validResult = ValidationUtil.validateBean(post);
-        if(validResult.hasErrors()) {
-            return Result.fail(validResult.getErrors());
+        if(ValidationUtil.validateBean(post).hasErrors()) {
+            return Result.fail(ValidationUtil.validateBean(post).getErrors());
         }
-        // 初始化并保存
-        if(post.getId() == null) {
+        // 初始化
+        if(null == post.getId()) {
             post.setUserId(getProfileId());
-
             post.setModified(new Date());
             post.setCreated(new Date());
             post.setCommentCount(0);
@@ -113,23 +116,20 @@ public class PostController extends BaseController{
             post.setViewCount(0);
             post.setVoteDown(0);
             post.setVoteUp(0);
-            mPostService.save(post);
-
+            postService.save(post);
         } else {
-            MPost tempPost = mPostService.getById(post.getId());
+            Post tempPost = postService.getById(post.getId());
             Assert.isTrue(tempPost.getUserId().longValue() == getProfileId().longValue(), "无权限编辑此文章！");
 
             tempPost.setTitle(post.getTitle());
             tempPost.setContent(post.getContent());
             tempPost.setCategoryId(post.getCategoryId());
-            // 更新到数据库
-            mPostService.updateById(tempPost);
+            postService.updateById(tempPost);
         }
 
          // 通知消息给mq，告知更新或添加
         amqpTemplate.convertAndSend(
-                RabbitConfig.es_exchange,
-                RabbitConfig.es_bind_key,
+                RabbitConfig.ES_EXCHANGE, RabbitConfig.ES_BIND_KEY,
                 new PostMqIndexMessage(post.getId(), PostMqIndexMessage.CREATE_OR_UPDATE)
         );
 
@@ -144,23 +144,20 @@ public class PostController extends BaseController{
     @PostMapping("/post/delete")
     public Result delete(Long id) {
 
-        MPost post = mPostService.getById(id);
+        Post post = postService.getById(id);
         Assert.notNull(post, "该文章已被删除");
         Assert.isTrue(post.getUserId().longValue() == getProfileId().longValue(), "无权限删除此文章！");
 
-        mPostService.removeById(id);
+        postService.removeById(id);
 
         // 删除相关消息、收藏
         messageService.removeByMap(MapUtil.of("post_id", id));
-        mUserCollectionService.removeByMap(MapUtil.of("post_id", id));
+        userCollectionService.removeByMap(MapUtil.of("post_id", id));
 
-        //
-        amqpTemplate.convertAndSend(RabbitConfig.es_exchange, RabbitConfig.es_bind_key,
+        amqpTemplate.convertAndSend(RabbitConfig.ES_EXCHANGE, RabbitConfig.ES_BIND_KEY,
                 new PostMqIndexMessage(post.getId(), PostMqIndexMessage.REMOVE));
 
         return Result.success().action("/user/index");
-
-
     }
 
     /**
@@ -173,10 +170,10 @@ public class PostController extends BaseController{
         Assert.notNull(jid, "找不到对应的文章");
         Assert.hasLength(content, "评论内容不能为空");
 
-        MPost post = mPostService.getById(jid);
+        Post post = postService.getById(jid);
         Assert.isTrue(post != null, "该文章已被删除");
 
-        MComment comment = new MComment();
+        Comment comment = new Comment();
         comment.setPostId(jid);
         comment.setContent(content);
         comment.setUserId(getProfileId());
@@ -185,20 +182,19 @@ public class PostController extends BaseController{
         comment.setLevel(0);
         comment.setVoteDown(0);
         comment.setVoteUp(0);
-        // 插入到数据库
-        mCommentService.save(comment);
+        commentService.save(comment);
 
         // 评论数量加一
         post.setCommentCount(post.getCommentCount() + 1);
-        mPostService.updateById(post);
+        postService.updateById(post);
 
         // 本周热议数量加一
-        mPostService.increaseCommentCountAndUnionForWeekRank(post.getId(), true);
+        postService.increaseCommentCountAndUnionForWeekRank(post.getId(), true);
 
         // 通知作者，有人评论了你的文章
         // 作者自己评论自己文章，不需要通知
         if(!comment.getUserId().equals(post.getUserId())) {
-            MUserMessage message = new MUserMessage();
+            UserMessage message = new UserMessage();
             message.setPostId(jid);
             message.setCommentId(comment.getId());
             message.setFromUserId(getProfileId());
@@ -218,9 +214,9 @@ public class PostController extends BaseController{
             String username = content.substring(1, content.indexOf(" "));
             System.out.println(username);
 
-            MUser user = mUserService.getOne(new QueryWrapper<MUser>().eq("username", username));
+            User user = userService.getOne(new QueryWrapper<User>().eq("username", username));
             if(user != null) {
-                MUserMessage message = new MUserMessage();
+                UserMessage message = new UserMessage();
                 message.setPostId(jid);
                 message.setCommentId(comment.getId());
                 message.setFromUserId(getProfileId());
@@ -245,29 +241,24 @@ public class PostController extends BaseController{
     @Transactional
     @PostMapping("/post/jieda-delete/")
     public Result reply(Long id) {
-
         Assert.notNull(id, "评论id不能为空！");
 
-        MComment comment = mCommentService.getById(id);
-
+        Comment comment = commentService.getById(id);
         Assert.notNull(comment, "找不到对应评论！");
 
         if(comment.getUserId().longValue() != getProfileId().longValue()) {
             return Result.fail("不是你发表的评论！");
         }
-        mCommentService.removeById(id);
+        commentService.removeById(id);
 
         // 评论数量减一
-        MPost post = mPostService.getById(comment.getPostId());
+        Post post = postService.getById(comment.getPostId());
         post.setCommentCount(post.getCommentCount() - 1);
-        mPostService.saveOrUpdate(post);
+        postService.saveOrUpdate(post);
 
         //评论数量减一
-        mPostService.increaseCommentCountAndUnionForWeekRank(comment.getPostId(), false);
-
+        postService.increaseCommentCountAndUnionForWeekRank(comment.getPostId(), false);
         return Result.success(null);
     }
-
-
 
 }

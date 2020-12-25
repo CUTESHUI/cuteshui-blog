@@ -14,13 +14,16 @@ public class WebsocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/websocket") // 注册一个端点，websocket的访问地址
-                .withSockJS(); // 可降级，当浏览器不支持websocket，可降为 ajax..等
+        // 注册一个端点，websocket的访问地址
+        registry.addEndpoint("/websocket")
+                // 可降级，当浏览器不支持websocket，可降为 ajax..等
+                .withSockJS();
     }
 
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
-        registry.enableSimpleBroker("/user/", "/topic/"); //推送消息前缀
+        //推送消息前缀
+        registry.enableSimpleBroker("/user/", "/topic/");
         registry.setApplicationDestinationPrefixes("/app");
     }
 }

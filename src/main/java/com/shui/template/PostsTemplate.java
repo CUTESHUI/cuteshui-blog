@@ -4,8 +4,8 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.shui.common.templates.DirectiveHandler;
 import com.shui.common.templates.TemplateDirective;
-import com.shui.service.MPostService;
-import com.shui.vo.PostVo;
+import com.shui.service.PostService;
+import com.shui.dto.PostVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class PostsTemplate extends TemplateDirective {
 
     @Autowired
-    MPostService mPostService;
+    PostService postService;
 
     /**
      *  标签名字
@@ -34,7 +34,7 @@ public class PostsTemplate extends TemplateDirective {
         Integer size = handler.getInteger("size", 2);
         Long categoryId = handler.getLong("categoryId");
 
-        IPage<PostVo> pages = mPostService.paging(new Page(pn, size), categoryId, null, level, null, "created");
+        IPage<PostVo> pages = postService.paging(new Page(pn, size), categoryId, null, level, null, "created");
 
         // RESULTS：返回值名称
         // pages: 返回结果

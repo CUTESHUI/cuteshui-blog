@@ -14,12 +14,10 @@ public class FreemarkerConfig {
 
     @Autowired
     private freemarker.template.Configuration configuration;
-
     @Autowired
-    PostsTemplate postsTemplate;
-
+    private PostsTemplate postsTemplate;
     @Autowired
-    WeekRankTemplate weekRankTemplate;
+    private WeekRankTemplate weekRankTemplate;
 
     @PostConstruct
     public void setUp() {

@@ -12,9 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- *  全局异常处理
+ * 全局异常处理
  */
-@Slf4j
 @ControllerAdvice
 public class GlobalExcepitonHandler {
 
@@ -27,10 +26,6 @@ public class GlobalExcepitonHandler {
             response.setContentType("application/json;charset=UTF-8");
             response.getWriter().print(JSONUtil.toJsonStr(Result.fail(e.getMessage())));
             return null;
-        }
-
-        if(e instanceof NullPointerException) {
-            // ...
         }
 
         // web处理

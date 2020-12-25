@@ -1,8 +1,8 @@
 package com.shui.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.shui.entity.MUserMessage;
-import com.shui.service.MUserMessageService;
+import com.shui.entity.UserMessage;
+import com.shui.service.UserMessageService;
 import com.shui.service.WebsocketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
@@ -13,16 +13,15 @@ import org.springframework.stereotype.Service;
 public class WebsocketServiceImpl implements WebsocketService {
 
     @Autowired
-    MUserMessageService mUserMessageService;
-
+    private UserMessageService userMessageService;
     @Autowired
-    SimpMessagingTemplate simpMessagingTemplate;
+    private SimpMessagingTemplate simpMessagingTemplate;
 
-    @Async // 异步，不影响同一个方法中之前的代码
+    @Async
     @Override
     public void sendMessCountToUser(Long toUserId) {
         // 未读消息
-        int count = mUserMessageService.count(new QueryWrapper<MUserMessage>()
+        int count = userMessageService.count(new QueryWrapper<UserMessage>()
                 .eq("to_user_id", toUserId)
                 .eq("status", "0")
         );

@@ -6,15 +6,15 @@ import cn.hutool.crypto.SecureUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.shui.common.lang.Result;
-import com.shui.entity.MPost;
-import com.shui.entity.MUser;
-import com.shui.entity.MUserCollection;
-import com.shui.entity.MUserMessage;
+import com.shui.entity.Post;
+import com.shui.entity.User;
+import com.shui.entity.UserCollection;
+import com.shui.entity.UserMessage;
 import com.shui.shiro.AccountProfile;
 import com.shui.util.UploadUtil;
-import com.shui.vo.UserMessageVo;
+import com.shui.util.ValidationUtil;
+import com.shui.dto.UserMessageDTO;
 import org.apache.shiro.SecurityUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.*;
@@ -26,21 +26,27 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 用户相关
+ * @author CUTESHUI
+ * @since 2020-09-24
+ */
 @Controller
 public class UserController extends BaseController {
 
-    @Autowired
-    UploadUtil uploadUtil;
+    @GetMapping("/user/index")
+    public String index() {
+        return "/user/index";
+    }
 
     /**
      *  用户中心
      */
     @GetMapping("/user/home")
     public String home() {
+        User user = userService.getById(getProfileId());
 
-        MUser user = mUserService.getById(getProfileId());
-
-        List<MPost> posts = mPostService.list(new QueryWrapper<MPost>()
+        List<Post> posts = postService.list(new QueryWrapper<Post>()
                 .eq("user_id", getProfileId())
                 // 30天内
                 //.gt("created", DateUtil.offsetDay(new Date(), -30))
@@ -54,9 +60,8 @@ public class UserController extends BaseController {
 
     @GetMapping("/user/set")
     public String set() {
-        MUser user = mUserService.getById(getProfileId());
+        User user = userService.getById(getProfileId());
         request.setAttribute("user", user);
-
         return "user/set";
     }
 
@@ -65,14 +70,18 @@ public class UserController extends BaseController {
      */
     @ResponseBody
     @PostMapping("/user/set")
-    public Result doSet(MUser user) {
+    public Result doSet(User user) {
+        // 校验
+        if(ValidationUtil.validateBean(user).hasErrors()) {
+            return Result.fail(ValidationUtil.validateBean(user).getErrors());
+        }
 
         if(StrUtil.isNotBlank(user.getAvatar())) {
 
-            MUser temp = mUserService.getById(getProfileId());
+            User temp = userService.getById(getProfileId());
             temp.setAvatar(user.getAvatar());
             // 当前用户的头像更新到数据库
-            mUserService.updateById(temp);
+            userService.updateById(temp);
 
             AccountProfile profile = getProfile();
             profile.setAvatar(user.getAvatar());
@@ -85,18 +94,18 @@ public class UserController extends BaseController {
         if(StrUtil.isBlank(user.getUsername())) {
             return Result.fail("昵称不能为空");
         }
-        int count = mUserService.count(new QueryWrapper<MUser>()
+        int count = userService.count(new QueryWrapper<User>()
                 .eq("username", getProfile().getUsername())
                 .ne("id", getProfileId()));
         if(count > 0) {
             return Result.fail("改昵称已被占用");
         }
         // 更新昵称
-        MUser temp = mUserService.getById(getProfileId());
+        User temp = userService.getById(getProfileId());
         temp.setUsername(user.getUsername());
         temp.setGender(user.getGender());
         temp.setSign(user.getSign());
-        mUserService.updateById(temp);
+        userService.updateById(temp);
 
         AccountProfile profile = getProfile();
         profile.setUsername(temp.getUsername());
@@ -109,7 +118,7 @@ public class UserController extends BaseController {
     @ResponseBody
     @PostMapping("/user/upload")
     public Result uploadAvatar(@RequestParam(value = "file") MultipartFile file) throws IOException {
-        return uploadUtil.upload(UploadUtil.type_avatar, file);
+        return uploadUtil.upload(UploadUtil.TYPE_AVATAR, file);
     }
 
     /**
@@ -117,28 +126,22 @@ public class UserController extends BaseController {
      */
     @ResponseBody
     @PostMapping("/user/repass")
-    public Result repass(String nowpass, String pass, String repass) {
-        if(!pass.equals(repass)) {
+    public Result repass(String nowPass, String pass, String prePass) {
+        if(!pass.equals(prePass)) {
             return Result.fail("两次密码不相同");
         }
 
-        MUser user = mUserService.getById(getProfileId());
+        User user = userService.getById(getProfileId());
 
-        String nowPassMd5 = SecureUtil.md5(nowpass);
+        String nowPassMd5 = SecureUtil.md5(nowPass);
         if(!nowPassMd5.equals(user.getPassword())) {
             return Result.fail("密码不正确");
         }
 
         user.setPassword(SecureUtil.md5(pass));
-        mUserService.updateById(user);
+        userService.updateById(user);
 
         return Result.success().action("/user/set#pass");
-
-    }
-
-    @GetMapping("/user/index")
-    public String index() {
-        return "/user/index";
     }
 
     /**
@@ -147,7 +150,7 @@ public class UserController extends BaseController {
     @ResponseBody
     @GetMapping("/user/public")
     public Result userP() {
-        IPage page = mPostService.page(getPage(), new QueryWrapper<MPost>()
+        IPage page = postService.page(getPage(), new QueryWrapper<Post>()
                 .eq("user_id", getProfileId())
                 .orderByDesc("created"));
         return Result.success(page);
@@ -159,7 +162,7 @@ public class UserController extends BaseController {
     @ResponseBody
     @GetMapping("/user/collection")
     public Result collection() {
-        IPage page = mPostService.page(getPage(), new QueryWrapper<MPost>()
+        IPage page = postService.page(getPage(), new QueryWrapper<Post>()
                 .inSql("id", "SELECT post_id FROM m_user_collection where user_id = " + getProfileId())
         );
         return Result.success(page);
@@ -171,7 +174,7 @@ public class UserController extends BaseController {
     @ResponseBody
     @PostMapping("/collection/find/")
     public Result collectionFind(Long pid) {
-        int count = mUserCollectionService.count(new QueryWrapper<MUserCollection>()
+        int count = userCollectionService.count(new QueryWrapper<UserCollection>()
                 .eq("user_id", getProfileId())
                 .eq("post_id", pid)
         );
@@ -185,10 +188,10 @@ public class UserController extends BaseController {
     @ResponseBody
     @PostMapping("/collection/add/")
     public Result collectionAdd(Long pid) {
-        MPost post = mPostService.getById(pid);
+        Post post = postService.getById(pid);
         Assert.isTrue(post != null, "该文章已被删除");
 
-        int count = mUserCollectionService.count(new QueryWrapper<MUserCollection>()
+        int count = userCollectionService.count(new QueryWrapper<UserCollection>()
                 .eq("user_id", getProfileId())
                 .eq("post_id", pid)
         );
@@ -196,7 +199,7 @@ public class UserController extends BaseController {
             return Result.fail("你已经收藏");
         }
 
-        MUserCollection collection = new MUserCollection();
+        UserCollection collection = new UserCollection();
         collection.setUserId(getProfileId());
         collection.setPostId(pid);
         collection.setCreated(new Date());
@@ -204,7 +207,7 @@ public class UserController extends BaseController {
 
         collection.setPostUserId(post.getUserId());
 
-        mUserCollectionService.save(collection);
+        userCollectionService.save(collection);
         return Result.success();
     }
 
@@ -214,10 +217,10 @@ public class UserController extends BaseController {
     @ResponseBody
     @PostMapping("/collection/remove/")
     public Result collectionRemove(Long pid) {
-        MPost post = mPostService.getById(pid);
+        Post post = postService.getById(pid);
         Assert.isTrue(post != null, "该帖子已被删除");
 
-        mUserCollectionService.remove(new QueryWrapper<MUserCollection>()
+        userCollectionService.remove(new QueryWrapper<UserCollection>()
                 .eq("user_id", getProfileId())
                 .eq("post_id", pid));
 
@@ -227,31 +230,32 @@ public class UserController extends BaseController {
     @GetMapping("/user/mess")
     public String mess() {
 
-        IPage<UserMessageVo> page = messageService.paging(getPage(), new QueryWrapper<MUserMessage>()
+        IPage<UserMessageDTO> page = messageService.paging(getPage(), new QueryWrapper<UserMessage>()
                 .eq("to_user_id", getProfileId())
                 .orderByDesc("created")
         );
 
         // 把消息改成已读状态
         List<Long> ids = new ArrayList<>();
-        for(UserMessageVo messageVo : page.getRecords()) {
-            if(messageVo.getStatus() == 0) {
-                ids.add(messageVo.getId());
+        for(UserMessageDTO dto : page.getRecords()) {
+            if(dto.getStatus() == 0) {
+                ids.add(dto.getId());
             }
         }
-        // 批量修改成已读
         messageService.updateToReaded(ids);
 
         request.setAttribute("pageData", page);
         return "user/mess";
     }
 
+    /**
+     * 删除消息
+     */
     @ResponseBody
     @PostMapping("/message/remove/")
-    public Result msgRemove(Long id,
-                            @RequestParam(defaultValue = "false") Boolean all) {
+    public Result msgRemove(Long id, @RequestParam(defaultValue = "false") Boolean all) {
 
-        boolean remove = messageService.remove(new QueryWrapper<MUserMessage>()
+        boolean remove = messageService.remove(new QueryWrapper<UserMessage>()
                 .eq("to_user_id", getProfileId())
                 .eq(!all, "id", id));
 
@@ -259,12 +263,12 @@ public class UserController extends BaseController {
     }
 
     /**
-     *  未读消息数量
+     * 未读消息数量
      */
     @ResponseBody
     @RequestMapping("/message/nums/")
     public Map msgNums() {
-        int count = messageService.count(new QueryWrapper<MUserMessage>()
+        int count = messageService.count(new QueryWrapper<UserMessage>()
                 .eq("to_user_id", getProfileId())
                 .eq("status", "0")
         );

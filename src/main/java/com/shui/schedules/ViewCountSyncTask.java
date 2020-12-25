@@ -1,9 +1,10 @@
 package com.shui.schedules;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.shui.entity.MPost;
-import com.shui.service.MPostService;
+import com.shui.entity.Post;
+import com.shui.service.PostService;
 import com.shui.util.RedisUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -14,19 +15,20 @@ import java.util.List;
 import java.util.Set;
 
 /**
- *  定时刷新阅读量
+ * 定时刷新阅读量
+ * @author CUTESHUI
+ * @since 2020-09-24
  */
+@Slf4j
 @Component
 public class ViewCountSyncTask {
 
     @Autowired
-    RedisUtil redisUtil;
-
+    private RedisUtil redisUtil;
     @Autowired
-    RedisTemplate redisTemplate;
-
+    private RedisTemplate redisTemplate;
     @Autowired
-    MPostService mPostService;
+    private PostService postService;
 
     @Scheduled(cron = "0/5 * * * * *") //每5秒同步一次
     public void task() {
@@ -47,7 +49,7 @@ public class ViewCountSyncTask {
         }
 
         // 需要更新阅读量的文章
-        List<MPost> posts = mPostService.list(new QueryWrapper<MPost>().in("id", ids));
+        List<Post> posts = postService.list(new QueryWrapper<Post>().in("id", ids));
 
         posts.stream().forEach((post) ->{
             // 从缓存中获取阅读量，然后更新字面量
@@ -59,13 +61,13 @@ public class ViewCountSyncTask {
             return;
         }
 
-        boolean isSuccess = mPostService.updateBatchById(posts);
+        boolean isSuccess = postService.updateBatchById(posts);
 
         // 如果成功更新到数据库,删除缓存里的
         if(isSuccess) {
             ids.stream().forEach((id) -> {
                 redisUtil.hdel("rank:post:" + id, "post:viewCount");
-                System.out.println("文章id为 "+id+" 的阅读量"+ " ------> 同步成功");
+                log.info("文章id为 "+id+" 的阅读量"+ " ------> 同步成功");
             });
         }
     }

@@ -13,7 +13,6 @@ public class MvcConfig implements WebMvcConfigurer {
 
     @Autowired
     Consts consts;
-
     @Bean
     ModelMapper modelMapper() {
         return new ModelMapper();

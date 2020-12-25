@@ -24,7 +24,6 @@ public class ShiroConfig {
         securityManager.setRealm(accountRealm);
 
         log.info("------------------>securityManager注入成功");
-
         return securityManager;
     }
 

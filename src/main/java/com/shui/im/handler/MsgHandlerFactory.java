@@ -13,7 +13,6 @@ public class MsgHandlerFactory {
 
     private static Map<String, MsgHandler> handlerMap = new HashMap<>();
 
-    //
     public static void init() {
         handlerMap.put(Consts.IM_MESS_TYPE_CHAT, new ChatMsgHandler());
         handlerMap.put(Consts.IM_MESS_TYPE_PING, new PingMsgHandler());

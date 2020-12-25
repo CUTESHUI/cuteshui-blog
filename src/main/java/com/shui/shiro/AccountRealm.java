@@ -1,6 +1,6 @@
 package com.shui.shiro;
 
-import com.shui.service.MUserService;
+import com.shui.service.UserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 public class AccountRealm extends AuthorizingRealm{
 
     @Autowired
-    MUserService userService;
+    private UserService userService;
 
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {

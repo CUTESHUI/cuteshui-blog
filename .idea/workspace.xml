@@ -3,290 +3,81 @@
   <component name="AnalysisUIOptions">
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3668de79-dc38-409d-9f00-58f5983b4511" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/CodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/mapper/MCommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/mapper/MCommentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/service/impl/MCommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/service/impl/MCommentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/CodeGenerator$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/CodeGenerator$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/CodeGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/EblogApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/common/exception/GlobalExcepitonHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/common/lang/Consts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/common/lang/Result.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/common/templates/DirectiveHandler$BaseMethod.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/common/templates/DirectiveHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/common/templates/TemplateDirective.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/common/templates/TemplateModelUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/config/ContextStartup.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/config/FreemarkerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/config/ImServerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/config/KaptchaConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/config/MvcConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/config/MybatisPlusConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/config/RabbitConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/config/RedisConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/config/ShiroConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/config/WebsocketConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/controller/AdminController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/controller/AuthController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/controller/BaseController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/controller/ChatController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/controller/PostController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/controller/indexController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/entity/BaseEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/entity/MCategory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/entity/MComment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/entity/MPost.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/entity/MUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/entity/MUserAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/entity/MUserCollection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/entity/MUserMessage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/im/handler/MsgHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/im/handler/MsgHandlerFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/im/handler/filter/ExculdeMineChannelContextFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/im/handler/impl/ChatMsgHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/im/handler/impl/PingMsgHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/im/message/ChatImMess.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/im/message/ChatOutMess.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/im/server/ImServerStarter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/im/server/ImWsMsgHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/im/vo/ImMess.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/im/vo/ImTo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/im/vo/ImUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/mapper/MCategoryMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/mapper/MCommentMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/mapper/MPostMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/mapper/MUserActionMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/mapper/MUserCollectionMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/mapper/MUserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/mapper/MUserMessageMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/schedules/ViewCountSyncTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/search/model/PostDocment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/search/mq/MqMessageHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/search/mq/PostMqIndexMessage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/search/repository/PostRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/service/ChatService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/service/MCategoryService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/service/MCommentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/service/MPostService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/service/MUserActionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/service/MUserCollectionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/service/MUserMessageService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/service/MUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/service/SearchService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/service/WebsocketService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/service/impl/ChatServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/service/impl/MCategoryServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/service/impl/MCommentServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/service/impl/MPostServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/service/impl/MUserActionServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/service/impl/MUserCollectionServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/service/impl/MUserMessageServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/service/impl/MUserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/service/impl/SearchServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/service/impl/WebsocketServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/shiro/AccountProfile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/shiro/AccountRealm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/shiro/AuthFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/template/PostsTemplate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/template/TimeAgoMethod.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/template/WeekRankTemplate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/util/RedisUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/util/SpringUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/util/UploadUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/util/ValidationUtil$ErrorMessage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/util/ValidationUtil$ValidResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/util/ValidationUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/vo/CommentVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/vo/PostVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shui/vo/UserMessageVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/MCategoryMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/MCommentMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/MPostMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/MUserActionMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/MUserCollectionMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/MUserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/MUserMessageMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/css/full.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/css/global.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/css/iconfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/css/iconfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/css/iconfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/css/iconfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/images/avatar/0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/images/avatar/00.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/images/avatar/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/images/avatar/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/images/avatar/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/images/avatar/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/images/avatar/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/images/avatar/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/images/avatar/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/images/avatar/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/images/avatar/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/images/avatar/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/images/avatar/9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/images/avatar/default.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/images/case.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/images/cuteshui_wx.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/images/fly.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/images/logo-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/js/chat.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/js/im.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/js/sockjs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/js/stomp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/layui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/layui.mobile.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/modules/code.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/modules/laydate/default/laydate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/modules/layer/default/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/modules/layer/default/layer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/modules/layim/html/chatlog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/modules/layim/html/find.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/modules/layim/html/getmsg.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/modules/layim/html/msgbox.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/modules/layim/layim.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/modules/layim/mobile/layim.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/modules/layim/skin/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/modules/layim/skin/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/modules/layim/skin/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/modules/layim/skin/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/modules/layim/skin/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/modules/layim/skin/logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/modules/layim/voice/default.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/css/modules/layim/voice/default.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/font/iconfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/font/iconfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/font/iconfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/font/iconfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/10.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/11.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/12.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/13.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/14.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/15.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/16.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/17.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/18.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/19.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/20.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/21.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/22.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/23.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/24.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/25.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/26.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/27.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/28.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/29.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/30.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/31.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/32.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/33.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/34.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/35.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/36.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/37.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/38.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/39.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/4.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/40.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/41.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/42.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/43.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/44.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/45.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/46.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/47.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/48.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/49.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/5.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/50.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/51.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/52.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/53.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/54.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/55.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/56.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/57.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/58.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/59.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/6.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/60.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/61.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/62.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/63.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/64.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/65.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/66.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/67.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/68.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/69.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/7.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/70.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/71.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/8.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/images/face/9.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/lay/modules/carousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/lay/modules/code.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/lay/modules/element.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/lay/modules/flow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/lay/modules/form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/lay/modules/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/lay/modules/laydate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/lay/modules/layedit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/lay/modules/layer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/lay/modules/layim.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/lay/modules/laypage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/lay/modules/laytpl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/lay/modules/mobile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/lay/modules/table.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/lay/modules/tree.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/lay/modules/upload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/lay/modules/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/layui.all.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/layui/layui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/mods/case.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/mods/face.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/mods/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/mods/jie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/res/mods/user.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/auth/login.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/auth/reg.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/error.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/inc/common.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/inc/footer.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/inc/header-panel.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/inc/header.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/inc/layout.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/inc/left.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/inc/right.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/post/category.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/post/detail.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/post/edit.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/search.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/home.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/index.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/mess.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/set.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/shui/EblogApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/common/exception/GlobalExcepitonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/common/exception/GlobalExcepitonHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/common/lang/Consts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/common/lang/Consts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/common/lang/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/common/lang/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/config/ContextStartup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/config/ContextStartup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/config/FreemarkerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/config/FreemarkerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/config/ImServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/config/ImServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/config/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/config/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/config/MybatisPlusConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/config/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/config/RabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/config/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/config/ShiroConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/config/WebsocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/config/WebsocketConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/controller/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/controller/indexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/controller/indexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/entity/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/entity/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/entity/MCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/entity/MComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/entity/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/entity/MPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/entity/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/entity/MUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/entity/MUserAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/entity/UserAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/entity/MUserCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/entity/UserCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/entity/MUserMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/entity/UserMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/im/handler/MsgHandlerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/im/handler/MsgHandlerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/mapper/MCategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/mapper/CategoryMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/mapper/MCommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/mapper/CommentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/mapper/MPostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/mapper/PostMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/mapper/MUserActionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/mapper/UserActionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/mapper/MUserCollectionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/mapper/UserCollectionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/mapper/MUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/mapper/MUserMessageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/mapper/UserMessageMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/schedules/ViewCountSyncTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/schedules/ViewCountSyncTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/service/ChatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/service/ChatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/service/MCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/service/MCommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/service/MPostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/service/MUserActionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/service/UserActionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/service/MUserCollectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/service/UserCollectionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/service/MUserMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/service/UserMessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/service/MUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/service/SearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/service/SearchService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/service/WebsocketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/service/WebsocketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/service/impl/ChatServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/service/impl/ChatServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/service/impl/MCategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/service/impl/MCommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/service/impl/CommentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/service/impl/MPostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/service/impl/PostServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/service/impl/MUserActionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/service/impl/UserActionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/service/impl/MUserCollectionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/service/impl/UserCollectionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/service/impl/MUserMessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/service/impl/UserMessageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/service/impl/MUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/service/impl/SearchServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/service/impl/SearchServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/service/impl/WebsocketServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/service/impl/WebsocketServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/shiro/AccountRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/shiro/AccountRealm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/template/PostsTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/template/PostsTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/vo/CommentVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/vo/CommentDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/vo/PostVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/vo/PostDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shui/vo/UserMessageVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shui/vo/UserMessageDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/MCategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CategoryMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/MCommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/MPostMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/PostMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/MUserActionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserActionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/MUserCollectionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserCollectionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/MUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/MUserMessageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMessageMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -303,7 +94,44 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/config/RabbitConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/config/WebsocketConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/common/exception/GlobalExcepitonHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/common/lang/Consts.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -350,60 +178,67 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/CUTESHUI/cuteshui-blog" />
+      </set>
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/EblogApplication.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/shui/EblogApplicationTests.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/inc/footer.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/impl/MUserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/user/index.ftl" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/controller/AuthController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/user/mess.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/user/set.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/search.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/util/SpringUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/ChatService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/im/server/ImWsMsgHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/im/message/ChatOutMess.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/im/message/ChatImMess.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/controller/BaseController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/inc/layout.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/res/mods/index.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/user/home.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/config/ImServerConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/im/server/ImServerStarter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/im/handler/impl/PingMsgHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/im/handler/MsgHandlerFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/im/handler/filter/ExculdeMineChannelContextFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/im/vo/ImMess.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/common/lang/Consts.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/impl/ChatServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/res/js/chat.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/res/js/im.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/template/TimeAgoMethod.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/controller/ChatController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/template/WeekRankTemplate.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/config/ContextStartup.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/config/ShiroConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/im/handler/impl/ChatMsgHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/vo/PostVo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/vo/CommentVo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/search/repository/PostRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/controller/PostController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/controller/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/controller/indexController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/MCommentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/CommentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/UserActionService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/PostService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shui/service/SearchService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/impl/SearchServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/inc/header.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/search/mq/MqMessageHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/search/mq/PostMqIndexMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/impl/MCommentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/UserMessageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/mapper/MUserMessageMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/impl/WebsocketServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/ChatService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/impl/CategoryServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/impl/ChatServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shui/mapper/MCommentMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shui/CodeGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/impl/UserActionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/impl/UserCollectionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/impl/SearchServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/MPostMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/mapper/MPostMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/impl/PostServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/impl/CommentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/impl/UserMessageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/UserCollectionService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/service/WebsocketService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/schedules/ViewCountSyncTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/mapper/CategoryMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/mapper/UserActionMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/mapper/UserCollectionMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/mapper/UserMessageMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/im/handler/MsgHandlerFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/entity/BaseEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/entity/Category.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/controller/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/controller/ChatController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/controller/indexController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/controller/BaseController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/controller/AuthController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/common/lang/Result.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/config/ContextStartup.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/config/FreemarkerConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/config/ImServerConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/config/MvcConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/common/lang/Consts.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/config/MybatisPlusConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/config/ShiroConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/controller/PostController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/config/RabbitConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/config/WebsocketConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shui/common/exception/GlobalExcepitonHandler.java" />
       </list>
     </option>
   </component>
@@ -426,10 +261,12 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="1011" />
   </component>
+  <component name="ProjectId" id="1lSQJuXy2zW8kQ1GUgMEtCWOQYm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -437,7 +274,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -470,6 +306,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cuteshui-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cuteshui-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="shui" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -478,6 +323,28 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="shui" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cuteshui-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cuteshui-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="shui" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="lang" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cuteshui-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cuteshui-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="shui" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -486,7 +353,10 @@
               <item name="cuteshui-blog" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="shui" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cuteshui-blog" type="b2602c69:ProjectViewProjectNode" />
@@ -494,33 +364,20 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cuteshui-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cuteshui-blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="inc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cuteshui-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cuteshui-blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="post" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="oracle" />
     <property name="MyBatisLogPluginindexNum" value="11" />
     <property name="MyBatisLogPluginparameters" value="Parameters:" />
     <property name="MyBatisLogPluginpreparing" value="Preparing:" />
@@ -529,13 +386,18 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="shared-indexes" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -619,6 +481,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -673,6 +536,14 @@
       <workItem from="1603697095474" duration="505000" />
       <workItem from="1603698920230" duration="168000" />
       <workItem from="1603851229933" duration="228000" />
+      <workItem from="1604053335557" duration="32000" />
+      <workItem from="1606376520165" duration="136000" />
+      <workItem from="1606464274392" duration="196000" />
+      <workItem from="1607587946195" duration="368000" />
+      <workItem from="1607588327478" duration="198000" />
+      <workItem from="1607588564878" duration="455000" />
+      <workItem from="1607589128556" duration="13000" />
+      <workItem from="1608876428780" duration="4442000" />
     </task>
     <servers />
   </component>
@@ -682,12 +553,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208931000" />
+    <option name="totallyTimeSpent" value="213737000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="1011" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2248394" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23608138" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -696,7 +568,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32955974" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3288889" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.68301886" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.59496856" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -726,7 +598,7 @@
       <window_info anchor="right" id="Bean Validation" order="10" weight="0.3299712" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22910663" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23608138" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -735,7 +607,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32955974" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3288889" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.68301886" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.59496856" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -769,321 +641,382 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/mapper/MCommentMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/service/PostService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="100">
+          <caret line="9" selection-start-line="9" selection-end-line="13" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-core/3.2.0/mybatis-plus-core-3.2.0-sources.jar!/com/baomidou/mybatisplus/core/metadata/IPage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/service/UserActionService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2904">
-          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+        <state relative-caret-position="125">
+          <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/mapper/MPostMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/service/UserCollectionService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+        <state relative-caret-position="200">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MCommentMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/service/UserMessageService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        <state relative-caret-position="125">
+          <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MPostMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+        <state relative-caret-position="200">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MUserActionMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MUserCollectionMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/mapper/MUserMessageMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/service/WebsocketService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        <state relative-caret-position="150">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MUserMessageMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/service/impl/WebsocketServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        <state relative-caret-position="200">
+          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MUserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/service/impl/ChatServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/util/RedisUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-554">
-          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/service/impl/MCommentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/service/ChatService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/shiro/AuthFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/shiro/AccountRealm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/shiro/AccountProfile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/controller/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/service/MCategoryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/service/MCommentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/service/MUserActionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/service/MPostService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/service/impl/MPostServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
-          <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.2.0/mybatis-plus-extension-3.2.0-sources.jar!/com/baomidou/mybatisplus/extension/service/IService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/service/MUserMessageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="19" column="47" lean-forward="true" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/search/model/PostDocment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/search/repository/PostRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="7" column="84" selection-start-line="7" selection-start-column="84" selection-end-line="7" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/config/MybatisPlusConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/service/MUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/config/RabbitConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/config/RedisConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/config/ShiroConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="-2176">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="e#6438#6439#0" expanded="true" />
+            <element signature="e#6505#6506#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/schedules/ViewCountSyncTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="-536">
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/res/layui/css/modules/layim/html/getmsg.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/CodeGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/mapper/CategoryMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="93" column="9" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
+        <state relative-caret-position="200">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/service/impl/CommentServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="25" selection-start-line="25" selection-end-line="28" selection-end-column="21" />
+        <state relative-caret-position="612">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/search/mq/MqMessageHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/mapper/CommentMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        <state relative-caret-position="375">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/search/mq/PostMqIndexMessage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/mapper/PostMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="200">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/util/ValidationUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/mapper/UserActionMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        <state relative-caret-position="200">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar!/javax/validation/Validator.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/mapper/UserCollectionMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        <state relative-caret-position="200">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/mapper/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="12" selection-start-line="12" selection-end-line="15" selection-end-column="14" />
+        <state relative-caret-position="200">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/controller/AdminController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/mapper/UserMessageMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="63" column="39" lean-forward="true" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
+        <state relative-caret-position="200">
+          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/inc/right.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/im/handler/MsgHandlerFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300" />
+        <state relative-caret-position="375">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/post/detail.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/im/handler/MsgHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/im/handler/impl/ChatMsgHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-335">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/search.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/im/handler/impl/PingMsgHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/t-io/tio-core/3.2.5.v20190101-RELEASE/tio-core-3.2.5.v20190101-RELEASE.jar!/org/tio/core/ChannelContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/im/handler/filter/ExculdeMineChannelContextFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/entity/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/entity/UserMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/service/ChatService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/entity/BaseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="6" selection-start-line="6" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/shiro/AccountProfile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/controller/ChatController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.2.0/mybatis-plus-extension-3.2.0-sources.jar!/com/baomidou/mybatisplus/extension/service/IService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="119" column="12" selection-start-line="119" selection-start-column="12" selection-end-line="119" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/service/SearchService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/controller/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+          <folding>
+            <element signature="e#1672#1673#0" expanded="true" />
+            <element signature="e#1753#1754#0" expanded="true" />
+            <element signature="e#1787#1788#0" expanded="true" />
+            <element signature="e#1830#1831#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/controller/indexController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+        <state relative-caret-position="542">
+          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/common/lang/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="963">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+          <folding>
+            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/cn/hutool/hutool-all/4.1.17/hutool-all-4.1.17-sources.jar!/cn/hutool/crypto/SecureUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="559" column="25" selection-start-line="559" selection-start-column="25" selection-end-line="559" selection-end-column="25" />
+          <folding>
+            <element signature="e#14756#14757#0" expanded="true" />
+            <element signature="e#14819#14820#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="698">
-          <caret line="242" column="33" selection-start-line="242" selection-start-column="33" selection-end-line="242" selection-end-column="33" />
+        <state relative-caret-position="5050">
+          <caret line="228" lean-forward="true" selection-start-line="228" selection-end-line="228" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-836">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/controller/AuthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="826">
+          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/config/ContextStartup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/config/FreemarkerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/config/ImServerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/config/KaptchaConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/config/MvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/config/MybatisPlusConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/config/ShiroConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/config/RedisConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/controller/PostController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="81" column="42" selection-start-line="81" selection-start-column="42" selection-end-line="81" selection-end-column="42" />
+        <state relative-caret-position="-1097">
+          <caret line="168" column="11" selection-start-line="168" selection-start-column="11" selection-end-line="168" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/inc/left.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/config/RabbitConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/post/edit.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/config/WebsocketConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/common/exception/GlobalExcepitonHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shui/common/lang/Consts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

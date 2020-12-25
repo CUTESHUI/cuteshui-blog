@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
- *  shiro过滤器
- *  判断请求是否是ajax请求
+ * shiro过滤器
+ * 判断请求是否是ajax请求
  */
 public class AuthFilter extends UserFilter {
 

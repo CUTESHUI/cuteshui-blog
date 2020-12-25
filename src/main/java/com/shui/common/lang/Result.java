@@ -6,8 +6,9 @@ import java.io.Serializable;
 
 @Data
 public class Result implements Serializable {
-
-    // 0成功，-1失败
+    /**
+     * 0成功，-1失败
+     */
     private int status;
     private String msg;
     private Object data;
@@ -41,6 +42,5 @@ public class Result implements Serializable {
         this.action = action;
         return this;
     }
-
 
 }

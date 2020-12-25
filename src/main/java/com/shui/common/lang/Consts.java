@@ -16,7 +16,9 @@ public class Consts {
     public final static Long IM_GROUP_ID = 999L;
     public final static String IM_GROUP_NAME = "e-group-study";
 
-    //消息类型
+    /**
+     * 消息类型
+     */
     public final static String IM_MESS_TYPE_PING = "pingMessage";
     public final static String IM_MESS_TYPE_CHAT = "chatMessage";
 
